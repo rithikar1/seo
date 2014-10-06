@@ -1,0 +1,45 @@
+<h1>Listing sns</h1>
+ 
+<%= form_tag sns_path, :method => 'get' do %>
+
+<%= hidden_field_tag :direction, params[:direction] %>
+  <%= hidden_field_tag :sort, params[:sort] %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+
+
+
+<table>
+  <tr>
+    <th><%=sortable "P name" %></th>
+    <th><%=sortable "P age" %></th>
+    <th><%=sortable "P dofv" %></th>
+    <th><%=sortable "P dolv" %></th>
+    <th><%=sortable "P regno" %></th>
+    <th><%=sortable "P record" %></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sns.each do |sn| %>
+  <tr>
+    <td><%= sn.p_name %></td>
+    <td><%= sn.p_age %></td>
+    <td><%= sn.p_dofv %></td>
+    <td><%= sn.p_dolv %></td>
+    <td><%= sn.p_regno %></td>
+    <td><%= image_tag sn.photo %></td>
+   
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+
+
+<%= link_to 'New Sn', new_sn_path %>

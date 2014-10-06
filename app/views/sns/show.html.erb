@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>P name:</b>
+  <%= @sn.p_name %>
+</p>
+
+<p>
+  <b>P age:</b>
+  <%= @sn.p_age %>
+</p>
+
+<p>
+  <b>P dofv:</b>
+  <%= @sn.p_dofv %>
+</p>
+
+<p>
+  <b>P dolv:</b>
+  <%= @sn.p_dolv %>
+</p>
+
+<p>
+  <b>P regno:</b>
+  <%= @sn.p_regno %>
+</p>
+
+<p>
+  <b>P record:</b>
+  <%= image_tag @sn.photo.url %>
+</p>
+
+
+<%= link_to 'Edit', edit_sn_path(@sn) %> |
+<%= link_to 'Back', sns_path %>

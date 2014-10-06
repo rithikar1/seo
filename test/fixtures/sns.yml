@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  p_name: MyString
+  p_age: MyString
+  p_dofv: MyString
+  p_dolv: MyString
+  p_regno: MyString
+  p_record: MyString
+
+two:
+  p_name: MyString
+  p_age: MyString
+  p_dofv: MyString
+  p_dolv: MyString
+  p_regno: MyString
+  p_record: MyString

@@ -1,0 +1,41 @@
+<%= form_for @sn do |f| %>
+  <% if @sn.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sn.errors.count, "error") %> prohibited this sn from being saved:</h2>
+
+      <ul>
+      <% @sn.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :p_name %><br />
+    <%= f.text_field :p_name %>
+  </div>
+  <div class="field">
+    <%= f.label :p_age %><br />
+    <%= f.text_field :p_age %>
+  </div>
+  <div class="field">
+    <%= f.label :p_dofv %><br />
+    <%= f.text_field :p_dofv %>
+  </div>
+  <div class="field">
+    <%= f.label :p_dolv %><br />
+    <%= f.text_field :p_dolv %>
+  </div>
+  <div class="field">
+    <%= f.label :p_regno %><br />
+    <%= f.text_field :p_regno %>
+  </div>
+  <div class="field">
+    <%= f.label :p_record %><br />
+    <%= f.file_field :photo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
